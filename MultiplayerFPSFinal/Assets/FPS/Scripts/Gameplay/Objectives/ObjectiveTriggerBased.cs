@@ -14,11 +14,13 @@ namespace Unity.FPS.Gameplay
                 DestroyRoot = transform;
         }
 
-        public void TriggerObjective()
+        public void TriggerObjective(Switch sw)
         {
             if (IsCompleted) return;
+            if (sw != null) sw.SetStateActivated();
             CompleteObjective(string.Empty, string.Empty, "Objective complete : " + Title);
             Destroy(DestroyRoot.gameObject);
+
         }
     }
 }

@@ -7,7 +7,6 @@ namespace Unity.FPS.Gameplay
     {
         [Tooltip("Item to pickup to complete the objective")]
         public GameObject ItemToPickup;
-        public bool destroyOnPickup;
 
         protected override void Start()
         {
@@ -18,6 +17,8 @@ namespace Unity.FPS.Gameplay
 
         void OnPickupEvent(PickupEvent evt)
         {
+            if (evt.Pickup != ItemToPickup) return;
+            if (!isActivated) isActivated = true;
             if (IsCompleted || ItemToPickup != evt.Pickup)
                 return;
 
@@ -27,10 +28,6 @@ namespace Unity.FPS.Gameplay
 
             if (gameObject)
             {
-                if (destroyOnPickup)
-                {
-                    Destroy(ItemToPickup);
-                }
                 Destroy(gameObject);
             }
         }

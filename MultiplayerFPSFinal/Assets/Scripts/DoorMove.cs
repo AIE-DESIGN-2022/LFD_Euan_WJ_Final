@@ -14,6 +14,7 @@ public class DoorMove : MonoBehaviour
     [Tooltip("Should the object start moving on scene start?")]
     public bool moveOnStart;
 
+    public bool poweredDoor = false;
     private Vector3 startPostionL;
     private Vector3 startPostionR;
     private bool moving, moveToTarget = true;
