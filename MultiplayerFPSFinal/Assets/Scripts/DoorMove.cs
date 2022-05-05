@@ -28,8 +28,8 @@ public class DoorMove : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        startPostionL = doorL.transform.position;
-        startPostionR = doorR.transform.position;
+        //startPostionL = doorL.transform.position;
+        //startPostionR = doorR.transform.position;
   /*      if (targetPosition.parent == transform)
             targetPosition.parent = null;*/
         if (moveOnStart)

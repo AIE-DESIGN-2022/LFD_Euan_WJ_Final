@@ -486,5 +486,11 @@ namespace Unity.FPS.AI
                 m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
             }
         }
+
+        public void ActivateTurret()
+        {
+            GetComponent<EnemyTurret>().enabled = true;
+            GetComponentInChildren<Animator>().enabled = true;
+        }
     }
 }
