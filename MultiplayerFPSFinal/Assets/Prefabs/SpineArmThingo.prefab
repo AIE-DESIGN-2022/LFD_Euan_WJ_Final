@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 881977693022647042}
   - component: {fileID: 6547467350165367160}
+  - component: {fileID: 769082454138381715}
   m_Layer: 0
   m_Name: RiggedAnimatedAlienSpineFIXED2
   m_TagString: Untagged
@@ -176,6 +177,47 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!23 &769082454138381715
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537822425209809336}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 729615490ddcee740b4a6e3fae378ca6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1483024569464816195
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,8 +397,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2990882006103138078}
   m_LocalRotation: {x: -0, y: -0, z: 0.11710886, w: 0.9931192}
-  m_LocalPosition: {x: 0.0052, y: 0.00509067, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0052, y: 0.0050907, z: 0.0000000035424}
+  m_LocalScale: {x: 1, y: 1, z: 1.3912}
   m_Children: []
   m_Father: {fileID: 881977693022647042}
   m_RootOrder: 0
@@ -380,7 +422,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5a9c241ed68b054ca8caa3583435fd8, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -566,6 +608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6771355099650319516}
   - component: {fileID: 6081671052594372822}
+  - component: {fileID: 4712519798409603213}
   m_Layer: 0
   m_Name: SpineArmThingo
   m_TagString: Untagged
@@ -582,7 +625,7 @@ Transform:
   m_GameObject: {fileID: 4597128667794979933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.19, y: 0.69, z: 0}
-  m_LocalScale: {x: 45.622944, y: 34.638935, z: 53.388992}
+  m_LocalScale: {x: 39.960423, y: 39.960423, z: 49.43503}
   m_Children:
   - {fileID: 881977693022647042}
   m_Father: {fileID: 0}
@@ -600,6 +643,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0401af04a5f93f40b07eeca506a1271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!23 &4712519798409603213
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4597128667794979933}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 86c6f8c1d3bafc749b115db2efc4ab35, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5056436917286117680
 GameObject:
   m_ObjectHideFlags: 0
