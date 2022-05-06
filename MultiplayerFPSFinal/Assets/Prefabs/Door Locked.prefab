@@ -68,6 +68,7 @@ MonoBehaviour:
   targetPositionR: {fileID: 7512185935467370565}
   moveSpeed: 2
   moveOnStart: 0
+  poweredDoor: 0
 --- !u!95 &1713199385264769806
 Animator:
   serializedVersion: 3
@@ -101,6 +102,7 @@ GameObject:
   - component: {fileID: 4878944870955879950}
   - component: {fileID: 3494563195616189959}
   - component: {fileID: 4191627274642185802}
+  - component: {fileID: 6794895203573619621}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -452,6 +454,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!208 &6794895203573619621
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560232118013354573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.9570003, y: 0.186, z: 1.345}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.48700002, y: 0, z: -0.37500003}
+  m_TimeToStationary: 0.5
 --- !u!1 &1395016301079596347
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +484,7 @@ GameObject:
   - component: {fileID: 736709960887273430}
   - component: {fileID: 4877782154160153654}
   - component: {fileID: 241777981319526642}
+  - component: {fileID: 9187327264615712759}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -817,6 +836,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!208 &9187327264615712759
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395016301079596347}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 2.9570003, y: 0.186, z: 1.345}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.48700002, y: 0, z: 0.37500003}
+  m_TimeToStationary: 0.5
 --- !u!1 &6100886330535421830
 GameObject:
   m_ObjectHideFlags: 0
