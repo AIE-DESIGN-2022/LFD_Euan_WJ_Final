@@ -9,9 +9,15 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyMediumRange;
     public GameObject enemyShortRange;
     public int numberOfEnemiesToSpawn;
+    public bool spawnOnStart = true;
 
     // Start is called before the first frame update
     void Start()
+    {
+      if (spawnOnStart) Spawn();
+    }
+
+    public void Spawn()
     {
         for (int i = 0; i < numberOfEnemiesToSpawn; i++)
         {
@@ -31,9 +37,7 @@ public class EnemySpawner : MonoBehaviour
             }
             locationsToSpawn.Remove(locationsToSpawn[randomNumber]);
         }
-        
     }
-
     // Update is called once per frame
     void Update()
     {

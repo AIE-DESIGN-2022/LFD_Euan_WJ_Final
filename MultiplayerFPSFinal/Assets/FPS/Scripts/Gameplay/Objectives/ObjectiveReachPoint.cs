@@ -17,7 +17,7 @@ namespace Unity.FPS.Gameplay
 
         void OnTriggerEnter(Collider other)
         {
-            if (IsCompleted || !IsActivated())
+            if (IsCompleted)
                 return;
 
             var player = other.GetComponent<PlayerCharacterController>();

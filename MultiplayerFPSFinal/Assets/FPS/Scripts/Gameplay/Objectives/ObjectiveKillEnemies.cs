@@ -1,5 +1,6 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Unity.FPS.Gameplay
 {
@@ -15,6 +16,7 @@ namespace Unity.FPS.Gameplay
         public int NotificationEnemiesRemainingThreshold = 3;
 
         int m_KillTotal;
+        public UnityEvent action;
 
         protected override void Start()
         {
@@ -46,6 +48,10 @@ namespace Unity.FPS.Gameplay
             // update the objective text according to how many enemies remain to kill
             if (targetRemaining == 0)
             {
+                if (action != null)
+                {
+                    action.Invoke();
+                }
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
             else if (targetRemaining == 1)

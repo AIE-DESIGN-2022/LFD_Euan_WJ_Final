@@ -107,7 +107,7 @@ namespace Unity.FPS.Gameplay
             else if (isCallElevatorBottom) elevatorToCall.CallElevator(true);
             else if (elevator != null) elevator.ElevatorToggle();
             else if (door != null) door.ToggleDoor();
-            else if (objective != null) objective.TriggerObjective(this);
+            else if (objective != null) objective.TriggerObjective();
 
             OnSwitchPressed.Invoke();
         }

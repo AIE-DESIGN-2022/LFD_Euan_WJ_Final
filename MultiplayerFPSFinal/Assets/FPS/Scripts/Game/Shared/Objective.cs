@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Unity.FPS.Game
 {
@@ -25,32 +24,32 @@ namespace Unity.FPS.Game
         public bool IsBlocking() => !(IsOptional || IsCompleted);
 
         public static event Action<Objective> OnObjectiveCreated;
-        public static event Action<Objective> OnObjectiveActivated;
         public static event Action<Objective> OnObjectiveCompleted;
 
-        public bool startActivated = true;
+        [SerializeField] bool startActivated = true;
         [SerializeField] Objective[] nextObjectives;
-        [SerializeField] UnityEvent OnObjectiveComplete; 
 
-        public bool isActivated = false;
+        bool isActivated = false;
+
+        public int numberToComplete;
+        public int numberCompleted;
 
         protected virtual void Start()
         {
-            if (!startActivated) isActivated = false;
             if (startActivated) ActivateObjective();
             DelayVisible += DelayBeforeDisplay;
-            OnObjectiveCreated?.Invoke(this);
         }
 
         public virtual void ActivateObjective()
         {
-            if (isActivated) return;
-            isActivated = true;
-            OnObjectiveActivated.Invoke(this);
+            OnObjectiveCreated?.Invoke(this);
+
             DisplayMessageEvent displayMessage = Events.DisplayMessageEvent;
             displayMessage.Message = Title;
             displayMessage.DelayBeforeDisplay = this.DelayBeforeDisplay;
             EventManager.Broadcast(displayMessage);
+
+            isActivated = true;
         }
 
         public void UpdateObjective(string descriptionText, string counterText, string notificationText)
@@ -66,21 +65,23 @@ namespace Unity.FPS.Game
 
         public void CompleteObjective(string descriptionText, string counterText, string notificationText)
         {
-            if (!isActivated) return;
-            IsCompleted = true;
+            numberCompleted += 1;
+            if (numberCompleted >= numberToComplete)
+            {
+                IsCompleted = true;
 
-            ObjectiveUpdateEvent evt = Events.ObjectiveUpdateEvent;
-            evt.Objective = this;
-            evt.DescriptionText = descriptionText;
-            evt.CounterText = counterText;
-            evt.NotificationText = notificationText;
-            evt.IsComplete = IsCompleted;
-            EventManager.Broadcast(evt);
+                ObjectiveUpdateEvent evt = Events.ObjectiveUpdateEvent;
+                evt.Objective = this;
+                evt.DescriptionText = descriptionText;
+                evt.CounterText = counterText;
+                evt.NotificationText = notificationText;
+                evt.IsComplete = IsCompleted;
+                EventManager.Broadcast(evt);
 
-            ActivateNextObjectives();
-            OnObjectiveComplete.Invoke();
-            OnObjectiveCompleted?.Invoke(this);
-            //print("Completing " + gameObject.name);
+                ActivateNextObjectives();
+
+                OnObjectiveCompleted?.Invoke(this);
+            }
         }
 
         public bool IsActivated()
@@ -96,13 +97,6 @@ namespace Unity.FPS.Game
             {
                 obj.ActivateObjective();
             }
-        }
-
-        public void AutoComplete()
-        {
-            isActivated = true;
-            CompleteObjective(string.Empty, string.Empty, "Objective complete : " + Title);
-            Destroy(gameObject);
         }
     }
 }

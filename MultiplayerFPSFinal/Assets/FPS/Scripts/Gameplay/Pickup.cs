@@ -45,7 +45,10 @@ namespace Unity.FPS.Gameplay
             transform.position = m_StartPosition + Vector3.up * bobbingAnimationPhase;
 
             // Handle rotating
+            if (RotatingSpeed != 0)
+            {
             transform.Rotate(Vector3.up, RotatingSpeed * Time.deltaTime, Space.Self);
+            }
         }
 
         void OnTriggerEnter(Collider other)
