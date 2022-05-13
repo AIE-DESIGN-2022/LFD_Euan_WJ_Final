@@ -2111,17 +2111,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 1566
   m_IsSelectable: 1
-  m_SelectedFaces: 30000000
-  m_SelectedEdges:
-  - a: 193
-    b: 194
-  - a: 192
-    b: 193
-  - a: 194
-    b: 195
-  - a: 195
-    b: 192
-  m_SelectedVertices: c1000000c2000000c0000000c3000000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &6409472379748906623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2167,7 +2159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 49bc8f23414222a49b218879d8b89233, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2274,6 +2266,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2ca85bdcc81d8d24ba87f0f1135cf8fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb7c1e455e2a43d48948d1ff07169858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ca85bdcc81d8d24ba87f0f1135cf8fe, type: 3}
 --- !u!4 &1893427882971249688 stripped
@@ -2349,6 +2345,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.004
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2ca85bdcc81d8d24ba87f0f1135cf8fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb7c1e455e2a43d48948d1ff07169858, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ca85bdcc81d8d24ba87f0f1135cf8fe, type: 3}
 --- !u!4 &5170667756944053813 stripped
